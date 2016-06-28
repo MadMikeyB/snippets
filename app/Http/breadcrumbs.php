@@ -37,17 +37,17 @@ Breadcrumbs::register('snippets.index', function($breadcrumbs)
     $breadcrumbs->push('Snippets', route('snippets.index'));
 });
 
-// Home > Snippets > [Snippet]
+// Home > Snippets > Create
 Breadcrumbs::register('snippets.create', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
     $breadcrumbs->push('Create Snippet', route('snippets.create'));
 });
 
-// Home > Snippets > Create
+// Home > Snippets > [Snippet]
 Breadcrumbs::register('snippets.show', function($breadcrumbs, $snippet)
 {
-    $breadcrumbs->parent('snippets');
+    $breadcrumbs->parent('home');
     $breadcrumbs->push($snippet->title, route('snippets.show', $snippet->id));
 });
 

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Comment;
+use App\Snippet;
 
 class CommentsController extends Controller
 {
@@ -17,7 +19,7 @@ class CommentsController extends Controller
     {
 		$this->middleware('auth');
 	}
-	
+
     /**
      * Display a listing of the resource.
      *
@@ -44,9 +46,14 @@ class CommentsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Snippet $snippet, Request $request)
     {
-        //
+        $comment = new Comment($request->all());
+
+        $comment->user_id = $request->user()->id;
+        $snippet->comments()->save($comment);
+
+        return back();
     }
 
     /**

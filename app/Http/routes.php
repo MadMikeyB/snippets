@@ -35,4 +35,4 @@ Route::resource('snippets', 'SnippetsController');
 Route::resource('tags', 'TagsController');
 
 // Comments
-Route::resource('comments', 'CommentsController');
+Route::post('snippets/{snippet}/comment', 'CommentsController@store');

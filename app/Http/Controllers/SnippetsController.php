@@ -49,7 +49,13 @@ class SnippetsController extends Controller
      */
     public function store(Request $request)
     {
-    	dd($request->all());
+
+
+        $snippet = new Snippet($request->all());
+        $snippet->user_id = $request->user()->id;
+        $snippet->save();
+
+        return redirect('/');
     }
 
     /**
@@ -58,9 +64,9 @@ class SnippetsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Snippet $snippets)
     {
-        //
+    	return view('snippets.show', compact('snippets'));
     }
 
     /**
