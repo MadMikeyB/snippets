@@ -9,13 +9,23 @@ use App\Http\Requests;
 class CommentsController extends Controller
 {
     /**
+     * Create a new password controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+		$this->middleware('auth');
+	}
+	
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+    	return view('comments.index');
     }
 
     /**
@@ -25,7 +35,7 @@ class CommentsController extends Controller
      */
     public function create()
     {
-        //
+    	return view('comments.create');
     }
 
     /**

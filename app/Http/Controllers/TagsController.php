@@ -9,13 +9,23 @@ use App\Http\Requests;
 class TagsController extends Controller
 {
     /**
+     * Create a new password controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+		$this->middleware('auth');
+	}
+	
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+    	return view('tags.index');
     }
 
     /**
@@ -25,7 +35,7 @@ class TagsController extends Controller
      */
     public function create()
     {
-        //
+    	return view('tags.create');
     }
 
     /**

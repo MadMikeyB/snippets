@@ -14,6 +14,12 @@ class CreateSnippetsTable extends Migration
     {
         Schema::create('snippets', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->string('description');
+            $table->longtext('html');
+            $table->longtext('css');
+            $table->longtext('javascript');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
     }

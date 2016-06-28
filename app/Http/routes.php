@@ -11,4 +11,28 @@
 |
 */
 
-Route::auth();
+// Authentication Routes...
+Route::get('login', ['as' => 'login', 'uses' => 'Auth\AuthController@showLoginForm']);
+Route::post('login', 'Auth\AuthController@login');
+Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@logout']);
+
+// Registration Routes...
+Route::get('register', ['as' => 'register', 'uses' => 'Auth\AuthController@showRegistrationForm']);
+Route::post('register', 'Auth\AuthController@register');
+
+// Password Reset Routes...
+Route::get('password/reset/{token?}', ['as' => 'password.reset', 'uses' => 'Auth\PasswordController@showResetForm']);
+Route::post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
+Route::post('password/reset', 'Auth\PasswordController@reset');
+
+// Home
+Route::get('/', ['as' => 'home', 'uses' => 'SnippetsController@index']);
+
+// Snippets
+Route::resource('snippets', 'SnippetsController');
+
+// Tags
+Route::resource('tags', 'TagsController');
+
+// Comments
+Route::resource('comments', 'CommentsController');

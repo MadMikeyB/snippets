@@ -5,9 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Snippet;
 
 class SnippetsController extends Controller
 {
+
+    /**
+     * Create a new password controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+		$this->middleware('auth');
+	}
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +27,8 @@ class SnippetsController extends Controller
      */
     public function index()
     {
-        //
+    	$snippets = Snippet::all();
+        return view('snippets.index', compact('snippets'));
     }
 
     /**
@@ -25,7 +38,7 @@ class SnippetsController extends Controller
      */
     public function create()
     {
-        //
+    	return view('snippets.create');
     }
 
     /**
@@ -36,7 +49,7 @@ class SnippetsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    	dd($request->all());
     }
 
     /**
