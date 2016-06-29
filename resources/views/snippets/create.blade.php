@@ -19,9 +19,9 @@
 		</div>
 
 		<ul class="nav nav-tabs">
-  			<li class="active"><a href="#html" data-toggle="tab" aria-expanded="true">HTML</a></li>
-  			<li class=""><a href="#css" data-toggle="tab" aria-expanded="false">CSS</a></li>
-  			<li class=""><a href="#javascript" data-toggle="tab" aria-expanded="false">Javascript</a></li>
+  			<li class="active"><a href="#html" id="htmltoggle" data-toggle="tab" aria-expanded="true">HTML</a></li>
+  			<li class=""><a href="#css" id="csstoggle" data-toggle="tab" aria-expanded="false">CSS</a></li>
+  			<li class=""><a href="#javascript" id="jstoggle" data-toggle="tab" aria-expanded="false">Javascript</a></li>
   		</ul>
   		<div class="tab-content">
   			<div class="tab-pane fade active in" id="html">

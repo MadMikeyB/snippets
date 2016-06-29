@@ -72,7 +72,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
     <script src="{{ asset('js/ace/ace.js') }}"></script>
-    <script src="{{ asset('js/ace/theme-twilight.js') }}"></script>
+    <script src="{{ asset('js/ace/theme-monokai.js') }}"></script>
     <script src="{{ asset('js/ace/mode-html.js') }}"></script>
     <script src="{{ asset('js/ace/mode-css.js') }}"></script>
     <script src="{{ asset('js/ace/mode-javascript.js') }}"></script>
