@@ -28,21 +28,21 @@
 		<div role="tabpanel" class="tab-pane active" id="html">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<code>{{ $snippets->html }}</code>
+					<pre><code class="html">{{ $snippets->html }}</code></pre>
 				</div>
 			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane" id="css">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<code>{{ $snippets->css }}</code>
+					<pre><code class="css">{{ $snippets->css }}</code></pre>
 				</div>
 			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane" id="javascript">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<code>{{ $snippets->javascript }}</code>
+					<pre><code class="javascript">{{ $snippets->javascript }}</code></pre>
 				</div>
 			</div>
 		</div>

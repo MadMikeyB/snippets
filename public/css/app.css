@@ -1,11 +1,18 @@
-code {
-	white-space: pre-line;
-}
-
+/* nice iframe for preview */
 iframe {
 	border: 0px;
 	width: 100%;
 	min-height: 60vh;
 	height: 100%;
 	overflow: auto;
+}
+/* Reset Bootstrap <pre> and <code> styling */
+pre,code {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
 }
