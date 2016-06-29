@@ -28,34 +28,28 @@
 		<div role="tabpanel" class="tab-pane active" id="html">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<code>
-						{{ $snippets->html }}
-					</code>
+					<code>{{ $snippets->html }}</code>
 				</div>
 			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane" id="css">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<code>
-						{{ $snippets->css }}
-					</code>
+					<code>{{ $snippets->css }}</code>
 				</div>
 			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane" id="javascript">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<code>
-						{{ $snippets->javascript }}
-					</code>
+					<code>{{ $snippets->javascript }}</code>
 				</div>
 			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane" id="preview">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					Preview to go here.
+					<iframe src="{{ url('snippets/' . $snippets->id .'/preview') }}"></iframe>
 				</div>
 			</div>
 		</div>

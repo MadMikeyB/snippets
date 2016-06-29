@@ -30,6 +30,8 @@ Route::get('/', ['as' => 'home', 'uses' => 'SnippetsController@index']);
 
 // Snippets
 Route::resource('snippets', 'SnippetsController');
+Route::get('snippets/{snippets}/preview', 'SnippetsController@preview');
+
 
 // Tags
 Route::resource('tags', 'TagsController');

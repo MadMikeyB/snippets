@@ -61,12 +61,23 @@ class SnippetsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Resource  $snippets
      * @return \Illuminate\Http\Response
      */
     public function show(Snippet $snippets)
     {
     	return view('snippets.show', compact('snippets'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  Resource  $snippets
+     * @return \Illuminate\Http\Response
+     */
+    public function preview(Snippet $snippets)
+    {
+    	return view('snippets.preview', compact('snippets'));
     }
 
     /**
