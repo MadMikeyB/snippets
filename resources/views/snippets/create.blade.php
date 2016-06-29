@@ -29,7 +29,7 @@
 	  				<legend>HTML</legend>
 					<div class="form-group">
 						<div class="col-sm-12">
-							<textarea class="form-control" rows="30" name="html" required="required"></textarea>
+							<textarea class="form-control" id="editorhtml" rows="30" name="html" required="required"></textarea>
 						</div>
 					</div>
 				</fieldset>
@@ -39,7 +39,7 @@
 	  				<legend>CSS</legend>
 					<div class="form-group">
 						<div class="col-sm-12">
-							<textarea class="form-control" rows="30" name="css"></textarea>
+							<textarea class="form-control" id="editorcss" rows="30" name="css"></textarea>
 						</div>
 					</div>
 				</fieldset>
@@ -49,7 +49,7 @@
 	  				<legend>Javascript</legend>
 					<div class="form-group">
 						<div class="col-sm-12">
-							<textarea class="form-control" rows="30" name="javascript"></textarea>
+							<textarea class="form-control" id="editorjs" rows="30" name="javascript"></textarea>
 						</div>
 					</div>
 				</fieldset>

@@ -71,7 +71,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+    <script src="{{ asset('js/ace/ace.js') }}"></script>
+    <script src="{{ asset('js/ace/theme-twilight.js') }}"></script>
+    <script src="{{ asset('js/ace/mode-html.js') }}"></script>
+    <script src="{{ asset('js/ace/mode-css.js') }}"></script>
+    <script src="{{ asset('js/ace/mode-javascript.js') }}"></script>
+    <script src="{{ asset('js/jquery-ace.min.js') }}"></script>
+
+	<script>
+		hljs.initHighlightingOnLoad();
+		$('#editorhtml').ace({ theme: 'monokai', lang: 'html' });
+		$('#editorcss').ace({ theme: 'monokai', lang: 'css' });
+		$('#editorjs').ace({ theme: 'monokai', lang: 'javascript' });
+	</script>
 
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
