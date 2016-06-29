@@ -81,8 +81,8 @@
 	<script>
 		hljs.initHighlightingOnLoad();
 		$('#editorhtml').ace({ theme: 'monokai', lang: 'html' });
-		$('#editorcss').ace({ theme: 'monokai', lang: 'css' });
-		$('#editorjs').ace({ theme: 'monokai', lang: 'javascript' });
+		// $('#editorcss').ace({ theme: 'monokai', lang: 'css' });
+		// $('#editorjs').ace({ theme: 'monokai', lang: 'javascript' });
 	</script>
 
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
