@@ -26,7 +26,7 @@ Open Terminal and cd to the directory where you cloned the repository, and run:
 
 `php artisan migrate`
 
-## Modifying
+## Modifying 
 
 Templates are located in `/resources/views/`
 
